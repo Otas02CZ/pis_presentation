@@ -189,8 +189,12 @@ function handleGetDataResponse(data) {
     }
     document.getElementById("table-best-exam").innerHTML = tableHTML;
 
-    document.getElementById("weighted-average").innerHTML = "<h2>Vážený průměř ze všech zkoušek" +
-        " je " + calculateWeightedAverage(data.data).toFixed(2) + "</h2>";
+    const weightedAverage = calculateWeightedAverage(data.data);
+    if (isNaN(weightedAverage))
+        document.getElementById("weighted-average").innerHTML = "<h2>Vážený průměř není možné stanovit</h2>";
+    else
+        document.getElementById("weighted-average").innerHTML = "<h2>Vážený průměř ze všech zkoušek" +
+            " je " + weightedAverage.toFixed(2) + "</h2>";
     makeVisualisation(data.data);
 }
 function calculateWeightedAverage(exams) {
@@ -198,7 +202,7 @@ function calculateWeightedAverage(exams) {
     let fixF = 0;
     for (const index in exams) {
         const exam = exams[index];
-        if (exam.grade !== 0)
+        if (exam.grade !== 6)
             sum += exam.grade;
         else
             fixF++;
@@ -207,7 +211,7 @@ function calculateWeightedAverage(exams) {
 }
 function getStringExamGrade(grade) {
     switch (grade) {
-        case 0:
+        case 6:
             return "F";
         case 1:
             return "A";
@@ -290,7 +294,7 @@ function findWorstBest(exams)
 let indexVisual = 0;
 let visualisationInterval;
 function makeVisualisation(exams) {
-    exams.sort((a, b) => new Date(a.date) - new Date(b.date));let count = 0;
+    exams.sort((a, b) => new Date(a.date) - new Date(b.date));
     updateVisualisation(exams);
     visualisationInterval = setInterval(function () {updateVisualisation(exams)}, 2500);
 
@@ -299,9 +303,14 @@ function makeVisualisation(exams) {
 function updateVisualisation(exams) {
     const subExams = exams.slice(0, indexVisual+1);
     const avg = calculateWeightedAverage(subExams);
+    let avgMsg;
+    if (isNaN(avg))
+        avgMsg = "Nelze stanovit";
+    else
+        avgMsg = avg.toFixed(2);
     let visualisationHTML = "<div class='text-center'>" +
         "<p><b>Po zkoušce:</b></p><p>" + (indexVisual+1) + ".</p><p>" + exams[indexVisual].name + "</p>\n<p>" + exams[indexVisual].date +"</p></p>" +
-        "<h2>" + avg.toFixed(2) + "</h2>" +
+        "<h2>" + avgMsg + "</h2>" +
         "</div>";
     indexVisual++;
     if (indexVisual === exams.length) {
