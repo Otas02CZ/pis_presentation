@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>247555 - Otakar Kočí</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body class="bg-dark w3-animate-opacity" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="200">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MENU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me">O mně</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projekty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Znalosti a Dovednosti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#study-results">Studijní výsledky</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#break-them">Rozbíjení výsledků</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recommend">Moje doporučení</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#do-not-look">Sem se nedívejte</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Ťop Sekret</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://en.wikipedia.org/wiki/Top_Secret!" target="_blank">A lot of secret</a></li>
+                            <li><a class="dropdown-item" href="https://fiveminutemarketing.com/wp-content/uploads/2013/11/Top-Secret2.jpg" target="_blank">Very many of secret</a></li>
+                            <li><a class="dropdown-item" href="https://thesalesmaster.files.wordpress.com/2009/02/top-secret2.jpg" target="_blank">The much of secret</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <!-- parallax image and hero part -->
+    <div class="parallax w3-animate-opacity">
+        <div class="caption-name">
+            <span><i>Otakar Kočí</i></span>
+        </div>
+        <div class="caption-info">
+            <span id="info"><i>Příležitostný programátor, hráč strategických her, milovník hudby a svého času student VUT v Brně</i></span>
+        </div>
+        <a href="https://pop.system76.com/" target="_blank"><div class="caption-welcome">
+            <span id="hello-there"><i></i></span>
+        </div></a>
+    </div>
+
+    <!-- main part-->
+    <div>
+        <div class="container">
+            <div id="about-me" class="hidden">
+                <hr>
+                <h1 class="text-white">O mně</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6 block-text">
+                        <p>Ahoj, jsem Otakar Kočí. Je mi 20 a touto dobou studuji na fakultě Elektrotechniky a Komunikačních technologií na VUT v Brně.
+                        Zajímám se o IT svět, nové technlogie, hardware počítačů, overclocking a programování. Ve volném čase se nejčastěji věnuji programování,
+                            hraní videoher, čtení a sledování filmů a seriálů. Rád poslouchám hudbu, není styl, který bych nemohl poslouchat, ale pokud bych si
+                            měl vybrat, tak soundtracky, klasická a soudobá klasická hudba. Také rád cestuji a trávím čas s přáteli, na cestování, ale obvykle není moc času.
+                        </p>
+                    </div>
+                    <div class="col-sm-6 hover-zoomin">
+                        <a href="https://unsplash.com/photos/2LowviVHZ-E" target="_blank"><img class="img-fluid rounded" src="../img/profile.jpg" alt="Doplňující fotografie, nemá hlubší význam, estetika"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="hidden">
+                <hr>
+                <h1 class="text-end text-white">Moje projekty</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-6 hover-zoomin">
+                        <a href="https://unsplash.com/photos/3S0INpfREQc" target="_blank"><img class="img-fluid rounded" src="../img/workdesk.jpg" alt="Doplňující fotografie, nemá hlubší význam, estetika"></a>
+                    </div>
+                    <div class="col-sm-6 block-text">
+                        <p>Projektů mám rozdělaných spoustu. V prezentovatelném stavu je jich ale o poznání méně a ani tyto
+                            nejsou kdovíjak kvalitní. Každopádně dovolte mi Vám představit alespoň tři ze svých lépe vypadajících projektů:
+                         </p>
+                        <ul>
+                            <li><a href="https://github.com/Otas02CZ/leek" target="_blank">Leek - the file manager</a></li>
+                            <li><a href="https://github.com/Otas02CZ/database_of_restaurants" target="_blank">Database of restaurants</a></li>
+                            <li><a href="https://github.com/Otas02CZ/Space-ships" target="_blank">Space ships</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="skills" class="hidden">
+                <hr>
+                <h1 class="text-white">Znalosti a dovednosti</h1>
+                <hr>
+                <p class="block-text">Zde si dovolím sepsat seznam svých prachbídných dovedností a znalostí společně s velice objektivní metrikou sebehodnocení:</p>
+                <label class="block-text"><b>Lenost</b></label>
+                <div class="progress bg-secondary" style="height:20px">
+                    <div class="progress-bar font" style="width:100%"><b>100% - MAX ACHIEVED, WANNA TAKE A NAP?</b></div>
+                </div>
+                <label class="block-text"><b>Znalost jazyka C</b></label>
+                <div class="progress bg-secondary" style="height:20px">
+                    <div class="progress-bar font" style="width:30%"><b>30% - SHOULD IMPROVE</b></div>
+                </div>
+                <label class="block-text"><b>Profesionální hlazení koček</b></label>
+                <div class="progress bg-secondary" style="height:20px">
+                    <div class="progress-bar font" style="width:100%"><b>100% - MŇAU MŇAU</b></div>
+                </div>
+                <label class="block-text"><b>Znalost jazyka Java</b></label>
+                <div class="progress bg-secondary" style="height:20px">
+                    <div class="progress-bar bg-primary font" style="width:25%"><b>25% - catch (LowJavaSkillException e)</b></div>
+                </div>
+                <label class="block-text"><b>Přesnost při zalévání kytek</b></label>
+                <div class="progress bg-secondary" style="height:20px">
+                    <div class="progress-bar bg-primary font"  style="width:20%"><b>20% - Roof seems to be leaking?</b></div>
+                </div>
+                <p class="text-end block-text"><i>Info: od 0 % do 100 % jakožto od nejméně po nejvíce</i></p>
+                <p class="block-text">
+                    Mezi mé další dovednosti patří:
+                </p>
+                <ul class="block-text">
+                    <li>Znalost Web developmentu - mizerná ale budiž</li>
+                    <li>Angličtina na úrovni C6</li>
+                    <li>Schopnost aktualizovat aplikace v pop-os</li>
+                    <li>Otevřít task manager a ukončit nějakou aplikaci alespoň dvakrát za minutu</li>
+                </ul>
+            </div>
+            <div id="study-results" class="hidden">
+                <hr>
+                <h1 class="text-white">Moje studijní výsledky <button class="btn btn-secondary" onclick="getData()">Aktualizovat</button></h1>
+                <hr>
+                <div class="block-text">
+                    <h2>Výsledky zkoušek z daných předmětů</h2>
+                    <div id="results">
+                        <table class="table table-dark table-hover table-responsive container mt-3" id="exam-table" hidden>
+                            <thead>
+                            <tr>
+                                <th>Název zkoušky</th>
+                                <th>Datum konání</th>
+                                <th>Obdržená známka</th>
+                            </tr>
+                            </thead>
+                            <tbody id="table-results">
+
+                            </tbody>
+                        </table>
+                        <p class="block-text" id="exam-table-empty">Nelze zobrazit tabulku, databáze se zdá býti prázdná.</p>
+                    </div>
+                    <br>
+                    <h2 id="weighted-average" hidden></h2>
+                    <p class="block-text" id="weighted-average-empty">Nelze zobrazit vážený průměr, databáze se zdá býti prázdná.</p>
+                    <br>
+                    <h2>Nejhorší zkouška</h2>
+                    <table class="table table-dark table-hover table-responsive container mt-3" id="worst-exam" hidden>
+                        <thead>
+                            <tr>
+                                <th>Název zkoušky</th>
+                                <th>Datum konání</th>
+                                <th>Obdržená známka</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-worst-exam">
+
+                        </tbody>
+                    </table>
+                    <p class="block-text" id="worst-exam-empty">Nelze zobrazit, databáze se zdá býti prázdná.</p>
+                    <br>
+                    <h2>Nejlepší zkouška</h2>
+                    <table class="table table-dark table-hover table-responsive container mt-3" id="best-exam" hidden>
+                        <thead>
+                        <tr>
+                            <th>Název zkoušky</th>
+                            <th>Datum konání</th>
+                            <th>Obdržená známka</th>
+                        </tr>
+                        </thead>
+                        <tbody id="table-best-exam">
+
+                        </tbody>
+                    </table>
+                    <p class="block-text" id="best-exam-empty">Nelze zobrazit, databáze se zdá býti prázdná.</p>
+                    <br>
+                    <h2 class="text-center">Vývoj váženého studijního průměru</h2>
+                    <div id="visualisation-weighted-average" hidden>
+
+                    </div>
+                    <p class="block-text" id="visualisation-weighted-average-empty">Nelze zobrazit vizualizaci, databáze se zdá býti prázdná.</p>
+                </div>
+
+            </div>
+            <div id="break-them" class="hidden">
+                <hr>
+                <h1 class="text-white">Rozbijte moje studijní výsledky</h1>
+                <hr>
+                <div class="block-text">
+                    <div class="container mt-3">
+                        <h2>Přidejte zkoušku</h2>
+                        <form id="add-exam">
+                            <div class="mb-3 mt-3">
+                                <label for="name" class="form-label">Název zkoušky:</label>
+                                <input type="text" class="form-control" id="name" placeholder="Napište zde název zkoušky" name="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="date" class="form-label">Datum konání zkoušky:</label>
+                                <input type="date" class="form-control" id="date" placeholder="Vyberte nebo napište datum zkoušky" name="date">
+                            </div>
+                            <div class="mb-3">
+                                <label for="grade" class="form-label">Známka za zkoušku:</label>
+                                <select class="form-select" id="grade" name="grade">
+                                    <option value="1">A</option>
+                                    <option value="2">B</option>
+                                    <option value="3">C</option>
+                                    <option value="4">D</option>
+                                    <option value="5">E</option>
+                                    <option value="0">F</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-secondary" onclick="handleAddExamRequest()">Přidat zkoušku</button>
+                        </form>
+                        <div id="add-exam-info">
+
+                        </div>
+                    </div>
+                    <div class="container mt-3">
+                        <h2>Odstraňte zkoušku</h2>
+                        <p>Zadali jste něco špatně? Nebo se Vám něco nelíbí? Žádný problém využijte následující formulář.</p>
+                        <form id="rm-exam" hidden>
+                            <div class="mb-3">
+                                <label for="rm-exam-option" class="form-label">Zkouška:</label>
+                                <select class="form-select" id="rm-exam-option" name="exam-id">
+
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-secondary" onclick="handleRmExamRequest()">Odstranit zkoušku</button>
+                        </form>
+                        <p class="block-text" id="rm-exam-empty">Není co mazat, databáze se zdá býti prázdná.</p>
+                        <div id="rm-exam-info">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="recommend" class="hidden">
+                <hr>
+                <h1 class="text-white">Moje doporučení</h1>
+                <hr>
+                <p class="block-text"><b>První doporučení - neřidťe se následujícími doporučeními.</b></p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="block-text">Něco ke hraní - <a href="https://store.steampowered.com/app/933110/Age_of_Empires_III_Definitive_Edition/" target="_blank">Age of Empires III - Definitive Edition</a></p>
+                        <div class="hover-zoomin">
+                            <a href="https://www.gamingcoffee.com/wp-content/uploads/2020/08/Age-Of-Empires-III_-Definitive-Edition-4.jpg" target="_blank"><img class="img-fluid rounded small-img hover-zoomin" src="../img/aoe3de.jpg" alt="Snímek ze hry Age of Empires III - Definitive Edition"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="block-text">Něco k poslechu - <a href="https://open.spotify.com/album/02re9DV48w3DBMwnCR6S3Q?si=dH3209eCQUihQcpt655lsQ" target="_blank">The Witcher 3 Wild Hunt - Soundtrack</a></p>
+                        <div class="hover-zoomin">
+                            <a href="https://media.senscritique.com/media/000009709754/source_big/The_Witcher_3_Wild_Hunt_Soundtrack_Bande_Originale.jpg" target="_blank"><img class="img-fluid rounded small-img" src="../img/wit3soundtrack.jpg" alt="Přebal soundtracku ke hře The Witcher 3 Wild Hunt"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="block-text">Něco ke shlédnutí - <a href="https://www.imdb.com/title/tt8111088/" target="_blank">The Mandalorian</a></p>
+                        <div class="hover-zoomin">
+                            <a href="https://www.enjpg.com/img/2020/mandalorian-32.jpg" target="_blank"><img class="img-fluid rounded small-img" src="../img/mando.jpg" alt="Fotografie zobrazující Manda a Grogua"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="block-text">Něco k přečtení - <a href="https://en.wikipedia.org/wiki/Chupacabra" target="_blank">Chupacabra</a></p>
+                        <div class="hover-zoomin">
+                            <a href="https://www.flickr.com/photos/cartercomics/141058618/in/photostream/" target="_blank"><img class="img-fluid rounded small-img" src="../img/chupacabra.jpg" alt="Fotografie chupacabry"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="do-not-look" class="hidden">
+                <hr>
+                <h1 class="text-center text-white">Sem se nedívejte</h1>
+                <hr>
+                <p class="text-center"><button id="important-button" class="btn btn-secondary block-text" onclick="switchContextTrump()">Zobrazit skryté informace</button></p>
+                <div id="trump-gif">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="text-center" id="easterEgg"></div>
+        <p class="block-text text-center">
+            <span onclick="easterEgg()">🥚</span> -
+
+            Otakar Kočí -
+            <a href="https://github.com/Otas02CZ" target="_blank">GitHub</a> -
+            <a href="https://unsplash.com/photos/8qEB0fTe9Vw">Úvodní fotka</a> -
+            2023 - 247555 -
+            <button type="button" class="btn-secondary btn" onclick="getIp()">Moje IP adresa</button>
+        </p>
+    </footer>
+    <hr>
+<script src="../js/script.js"></script>
+<script src="../js/animate.js"></script>
+</body>
+</html>

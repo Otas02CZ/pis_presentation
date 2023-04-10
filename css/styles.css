@@ -1,0 +1,108 @@
+.parallax {
+    /* The image used */
+    background-image: url("../img/parallax_dark.jpg");
+
+    /* Set a specific height */
+    min-height: 1000px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption-name {
+    position: absolute;
+    left:0;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    text-shadow: 4px 4px 100px black;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+}
+
+.caption-info {
+    position: absolute;
+    left:0;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    text-shadow: 4px 4px 100px black;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+}
+
+.caption-welcome {
+    position: absolute;
+    left:0;
+    top: 65%;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+    text-shadow: 4px 4px 100px black;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+}
+
+.block-text {
+    color: white;
+    text-justify: inter-word;
+    text-align: justify;
+    font-size: large;
+}
+
+.font {
+    font-family: Roboto, sans-serif;
+    font-size: small;
+}
+
+.small-img {
+    max-height: 300px;
+    display: block;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+}
+.fade-in-element {
+    animation: fade-in 1.4s;
+}
+
+.hover-zoomin a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.hover-zoomin img {
+    width: auto;
+    display: block;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+}
+.hover-zoomin:hover img {
+    transform: scale(1.2);
+}
+
