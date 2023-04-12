@@ -55,10 +55,11 @@ function dispatchRequest(data, url) {
                 handleError();
                 return;
             }
+            // webzdarma.cz - php receive fix - remove commentary sent by the server
             const lastOccurrenceIndex = response.data.lastIndexOf("-->");
             if (lastOccurrenceIndex !== -1)
                 response.data = response.data.substring(lastOccurrenceIndex+3);
-            response.data = JSON.parse(response.data);
+            response.data = JSON.parse(response.data); // end fix
             switch (response.data.type) {
                 case "getData":
                     handleGetDataResponse(response.data);
@@ -308,7 +309,7 @@ function updateVisualisation(exams) {
         avgMsg = "Nelze stanovit";
     else
         avgMsg = avg.toFixed(2);
-    let visualisationHTML = "<div class='text-center'>" +
+    let visualisationHTML = "<div class='text-center w3-animate-opacity'>" +
         "<p><b>Po zkoušce:</b></p><p>" + (indexVisual+1) + ".</p><p>" + exams[indexVisual].name + "</p>\n<p>" + exams[indexVisual].date +"</p></p>" +
         "<h2>" + avgMsg + "</h2>" +
         "</div>";

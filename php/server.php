@@ -13,7 +13,7 @@ function connectSQL($SERVER_NAME, $DB_NAME, $USER_NAME, $PASSWORD) {
     try {
         $connection = new PDO("mysql:host=$SERVER_NAME;dbname=$DB_NAME", $USER_NAME, $PASSWORD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch(PDOException $ERORR) {
+    } catch(PDOException $ERROR) {
         exit;
     }
     return $connection;

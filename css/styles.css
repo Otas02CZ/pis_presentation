@@ -15,7 +15,7 @@
 .caption-name {
     position: absolute;
     left:0;
-    top: 20%;
+    top: 10%;
     width: 100%;
     text-align: center;
     font-size: 80px;
@@ -28,7 +28,7 @@
 .caption-info {
     position: absolute;
     left:0;
-    top: 45%;
+    top: 40%;
     width: 100%;
     text-align: center;
     font-size: x-large;
