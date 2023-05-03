@@ -57,6 +57,7 @@ switch ($receivedData["type"]) {
         break;
     case "addExam":
         $connection = connectSQL($SERVER_NAME, $DB_NAME, $USER_NAME, $PASSWORD);
+        $receivedData["data"]["name"] = htmlspecialchars($receivedData["data"]["name"]);
         $statement = $connection->prepare("INSERT INTO study_results (name, date, grade) VALUES (:name, :date, :grade)");
         $statement->bindParam(':name', $receivedData["data"]["name"]);
         $statement->bindParam(':date', $receivedData["data"]["date"]);
